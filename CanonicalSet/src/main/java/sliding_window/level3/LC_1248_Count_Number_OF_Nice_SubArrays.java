@@ -1,9 +1,6 @@
-package sliding_window;
+package sliding_window.level3;
 
 import org.junit.Test;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class LC_1248_Count_Number_OF_Nice_SubArrays {
     public int numberOfSubarrays(int[] nums, int k) {
