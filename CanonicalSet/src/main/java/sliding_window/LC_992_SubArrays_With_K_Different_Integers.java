@@ -29,7 +29,7 @@ public class LC_992_SubArrays_With_K_Different_Integers {
                 i++;
             }
             //Validate
-            counter+=(j-i)+1;;
+            counter+=(j-i)+1;
         }
         return counter;
     }
