@@ -38,9 +38,35 @@ public class LC_300_Longest_Increasing_Subsequence {
          return r;
      }
 
+     private int LengthOfLis2(int[] nums){
+         int[] dp = new int[nums.length];
+         for(int i=0;i<nums.length;i++){
+             dp[i]=1;
+             for(int j=0;j<i;j++){
+                if(nums[j]<nums[i]){
+                    dp[i]=Math.max(1+dp[j], dp[i]);
+                }
+             }
+         }
+         int max=Integer.MIN_VALUE;
+         for(int num: dp){
+             max=Math.max(num,max);
+         }
+         return max;
+     }
+
     @Test
     public void tc(){
-        int[] tail =  new int[3];
-        System.out.println(tail.length);
+        //int[] nums =  new int[]{1};
+        //int[] nums =  new int[]{1,2};
+        //int[] nums =  new int[]{1,5,2};
+        int[] nums =  new int[]{10,9,2,5,3,7,101,18};
+        System.out.println(this.LengthOfLis2(nums));
     }
 }
+
+/**
+ *
+ *
+ *
+ */
