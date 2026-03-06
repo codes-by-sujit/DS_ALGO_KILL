@@ -1,4 +1,4 @@
-package prefix_sum.level1;
+package prefix_sum.level_2;
 
 import org.junit.Test;
 
